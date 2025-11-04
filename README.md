@@ -67,3 +67,11 @@ confidential-wellness-connect/
 │   │   └── style.css
 │
 └── README.md
+```
+## 👤Team Members
+- Abhijeet Raj Singh  
+- Prashant S Bisht
+- Urvita Sharma
+- Toonu Raj Singh
+- Prince Kumar Singh
+
