@@ -5,9 +5,9 @@ A lightweight, secure, and privacy-focused web app that allows students to confi
 
 ---
 ## 🎥 Demo Video Link:
--Submmission 1:
--Submmission 2:
--Submmission 3:
+-Submmission 1:<br>
+-Submmission 2:<br>
+-Submmission 3:<br>
 
 
 ---
