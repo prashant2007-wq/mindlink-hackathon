@@ -201,6 +201,75 @@ backend-app/
 │── .env
 │── package.json
 ```
+
+
+---
+
+## 🔹 Features Implemented
+
+### 1. **Authentication**
+- Login forms with **Google Sign-In**  
+- Password reset flow with **request & confirm forms**  
+- Reusable **hooks** for form handling (`useLoginForm`, `useResetPasswordRequestForm`, `useResetPasswordConfirmForm`)
+
+### 2. **ERP Module**
+- **Dashboard** with `TestComponetForAuth` to display user info  
+- **Attendance** and **Clubs** pages  
+- **ERP layout** (`ERPLayout.tsx`) with:
+  - Sidebar navigation (`AppSidebar`)  
+  - Header (`AppHeader`)  
+  - Mobile navigation (`MobileNav`)  
+  - Dark mode toggle (`ModeSwitcher`)  
+- Loading state while pages load (`loading.tsx`)  
+
+### 3. **LMS Module**
+- Dashboard and Calendar pages  
+- **LMS layout** (`LMSLayout.tsx`) similar to ERP layout  
+- Loading spinner for async page load (`loading.tsx`)  
+
+### 4. **UI Components (Atoms)**
+- **Button** (`components/ui/button.tsx`) with variants and sizes  
+- **Input** (`components/ui/input.tsx`) with variants and sizes  
+- **Label** (`components/ui/label.tsx`) for forms  
+
+### 5. **Layout Components**
+- **AppShell**: Main wrapper for ERP/LMS pages  
+- **AppHeader**: Header with **logo, dark mode toggle, and mobile menu**  
+- **AppSidebar**: Sidebar for navigation  
+- **MobileNav**: Hamburger menu for small screens  
+- **ModeSwitcher & SwitchButton**: Toggle light/dark mode  
+
+---
+
+## 🔹 Styling
+- Tailwind CSS for responsive layouts  
+- Dark mode ready  
+- Flexbox and grid-based layouts for clean dashboard UI  
+
+---
+
+## 🔹 Tech Stack
+- **Next.js 13** (App Router)  
+- **React 18 + TypeScript**  
+- **Tailwind CSS**  
+- **Redux Toolkit** (for auth & mode state)  
+
+---
+
+## 🔹 How to Run Locally
+
+```bash
+# Clone the repository
+git clone https://github.com/prashant2007-wq/mindlink-hackathon.git
+cd mindlink-hackathon/frontend-app
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
+
 ## 👤Team Members
 - Abhijeet Raj Singh  
 - Prashant S Bisht
