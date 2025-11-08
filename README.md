@@ -237,7 +237,107 @@ backend-app/
 - **AppHeader**: Header with **logo, dark mode toggle, and mobile menu**  
 - **AppSidebar**: Sidebar for navigation  
 - **MobileNav**: Hamburger menu for small screens  
-- **ModeSwitcher & SwitchButton**: Toggle light/dark mode  
+- **ModeSwitcher & SwitchButton**: Toggle light/dark mode
+## 🔹 6. **Constants & Config**
+
+### 🧭 **`endpoints.ts`**
+- Contains all backend **API endpoints** in one centralized place  
+- Makes it easier to manage and update routes  
+
+### 🎨 **`ui.ts`**
+- Defines **UI constants** such as theme colors, font sizes, and layout spacing  
+- Helps maintain consistent design across all components  
+
+---
+## 🔹 7. **Authentication (Auth Folder)**
+### 🔑 **Login**
+- `LoginForm.tsx` → Handles **email/password** authentication  
+- `GoogleSignIn.tsx` → Enables **Google OAuth** login  
+### 🔄 **Reset Password**
+- `RequestForm.tsx` → For sending **password reset email**  
+- `ConfirmForm.tsx` → For **setting new password** after verification  
+### 🧩 **Auth Layout**
+- `layout.tsx` → Provides a unified structure for all authentication-related pages  
+- Used by login, reset, and confirm screens for consistent branding  
+---
+
+## 🔹 8. **ERP Module**
+### 📊 **Dashboard**
+- Uses `TestComponentForAuth.tsx` to test and display user authentication  
+### 🕒 **Attendance Page**
+- Displays mock **attendance data** for demonstration purposes  
+### 🎓 **Clubs Page**
+- Shows a list or layout of **student clubs and activities**  
+### 🧱 **ERP Layout**
+- `ERPLayout.tsx` → Base layout for all ERP pages  
+- Includes:
+  - `AppSidebar.tsx` → Sidebar navigation  
+  - `AppHeader.tsx` → Header with title and controls  
+  - `MobileNav.tsx` → Responsive mobile navigation  
+  - `ModeSwitcher.tsx` → Dark/Light theme toggle  
+### ⏳ **Loading State**
+- `loading.tsx` → Displays a **loading spinner** while ERP data loads  
+
+---
+## 🔹 9. **LMS Module**
+### 🧠 **Dashboard Page**
+- Provides an overview of the **learning management system**  
+### 🗓️ **Calendar Page**
+- Displays **upcoming assignments, events, and reminders**  
+### 🧱 **Layout**
+- `LMSLayout.tsx` → Defines structure and navigation for all LMS screens  
+### ⏳ **Loading**
+- `loading.tsx` → Shows a loading animation during content fetch  
+
+---
+## 🔹 10. **Global Files**
+### 🌐 **`globals.css`**
+- Contains global **CSS resets and base theme styles**  
+### 🧩 **`layout.tsx`**
+- Root layout that wraps the **entire application**  
+### 🚫 **`not-found.tsx`**
+- Custom **404 error page** for invalid routes  
+### 🏠 **`page.tsx`**
+- Homepage entry point linking to **login**, **register**, or **wellness** sections  
+### 📄 **`terms-of-service/page.tsx`**
+- Displays the **Terms & Conditions** page  
+### 🧿 **`favicon.ico`**
+- Browser tab icon for branding  
+
+---
+## 🔹 11. **Redux & State Management**
+### 🧩 **`ReduxProvider.tsx`**
+- Wraps the entire app with **Redux Provider** for global state access  
+### ⚙️ **Core Store Files**
+- `store/index.ts`, `rootReducer.ts`, `hooks.ts` → Core Redux setup  
+### 🌗 **Theme Control**
+- `modeSlice.ts` → Manages **Light/Dark mode** states  
+### 🔐 **Authentication State**
+- `authSlice.ts`, `authThunk.ts`, `tokenStorage.ts` → Handle **login, logout, token refresh, and session persistence**  
+
+---
+## 🔹 12. **Schemas & Validation**
+### ✅ **`LoginSchema.ts`**
+- Defines form validation using **Zod**  
+- Ensures proper email/password formatting  
+
+---
+## 🔹 13. **Utilities & Libraries**
+### 🔒 **`crypto.ts`**
+- Handles basic **encryption/decryption** for tokens  
+### ⚙️ **`axios.ts`**
+- Custom **Axios instance** with request/response interceptors for secure API calls  
+### 🧰 **`utils.ts`**
+- Common **helper functions** used across components  
+---
+
+## 🔹 14. **Project Summary**
+### 🧭 **Overview**
+A modular frontend platform designed for **university students and staff**, featuring:
+- 🏫 **ERP Module** – Attendance, Clubs, Profile  
+- 📚 **LMS Module** – Dashboard, Calendar  
+- 💆 **Wellness Booking System**  
+- 🔒 **Secure Authentication** – Email, Google, Reset Password  
 
 ---
 
@@ -249,10 +349,12 @@ backend-app/
 ---
 
 ## 🔹 Tech Stack
-- **Next.js 13** (App Router)  
-- **React 18 + TypeScript**  
+- **Next.js** (App Router)  
+- **TypeScript**  
 - **Tailwind CSS**  
-- **Redux Toolkit** (for auth & mode state)  
+- **Redux Toolkit**  
+- **Zod & React Hook Form**  
+- **Axios**
 
 ---
 
