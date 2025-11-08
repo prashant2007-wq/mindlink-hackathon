@@ -40,33 +40,166 @@ Our solution ensures a private booking experience within the browser itself — 
 Below is the **complete project folder structure** you need to create:  
 
 ```bash
-confidential-wellness-connect/
+├── frontend-app
+│ ├── (auth)
+│ │ ├── components
+│ │ │ └── AuthBootstrap.tsx
+│ │ ├── layout.tsx
+│ │ ├── login
+│ │ │ ├── components
+│ │ │ │ ├── GoogleSignIn.tsx
+│ │ │ │ └── LoginForm.tsx
+│ │ │ ├── hooks
+│ │ │ │ └── useLoginForm.tsx
+│ │ │ ├── page.tsx
+│ │ │ └── types.ts
+│ │ └── reset-password
+│ │ ├── components
+│ │ │ ├── ConfirmForm.tsx
+│ │ │ └── RequestForm.tsx
+│ │ ├── confirm
+│ │ │ └── page.tsx
+│ │ ├── hooks
+│ │ │ ├── useResetPasswordConfirmForm.tsx
+│ │ │ └── useResetPasswordRequestForm.ts
+│ │ └── request
+│ │ └── page.tsx
+│ ├── (erp)
+│ │ ├── attendance
+│ │ │ └── page.tsx
+│ │ ├── clubs
+│ │ │ └── page.tsx
+│ │ ├── dashboard
+│ │ │ ├── components
+│ │ │ │ └── TestComponetForAuth.tsx
+│ │ │ └── page.tsx
+│ │ ├── layout.tsx
+│ │ ├── loading.tsx
+│ │ └── profile
+│ ├── (lms)
+│ │ ├── layout.tsx
+│ │ ├── lms
+│ │ │ ├── calendar
+│ │ │ │ └── page.tsx
+│ │ │ └── dashboard
+│ │ │ └── page.tsx
+│ │ └── loading.tsx
+│ ├── favicon.ico
+│ ├── globals.css
+│ ├── layout.tsx
+│ ├── not-found.tsx
+│ ├── page.tsx
+│ └── terms-of-service
+│ └── page.tsx
+├── components
+│ ├── layout
+│ │ ├── AppHeader.tsx
+│ │ ├── AppShell.tsx
+│ │ ├── AppSidebar.tsx
+│ │ ├── ERPLayout.tsx
+│ │ ├── LMSLayout.tsx
+│ │ ├── MobileNav.tsx
+│ │ ├── ModeSwitcher.tsx
+│ │ └── SwitchButton.tsx
+│ ├── shared
+│ │ ├── atoms
+│ │ │ ├── Button
+│ │ │ │ └── index.tsx
+│ │ │ ├── Input
+│ │ │ │ └── index.tsx
+│ │ │ ├── Label
+│ │ │ │ └── index.tsx
+│ │ │ └── Text
+│ │ │ └── index.tsx
+│ │ └── molecules
+│ │ ├── BackButton
+│ │ │ └── index.tsx
+│ │ ├── Button
+│ │ │ └── index.tsx
+│ │ ├── Input
+│ │ │ └── index.tsx
+│ │ ├── NavButton
+│ │ │ └── index.tsx
+│ │ ├── PasswordInput
+│ │ │ └── index.tsx
+│ │ └── temp
+│ └── ui
+│ ├── button.tsx
+│ ├── input.tsx
+│ └── label.tsx
+├── config
+├── constants
+│ ├── endpoints.ts
+│ └── ui.ts
+├── contexts
+├── features
+│ ├── auth
+│ │ ├── authApi.ts
+│ │ ├── authSelectors.ts
+│ │ ├── authSlice.ts
+│ │ ├── authThunk.ts
+│ │ ├── tokenStorage.ts
+│ │ ├── TokenStorageInitializer.ts
+│ │ └── types.ts
+│ └── mode
+│ └── modeSlice.ts
+├── hooks
+├── lib
+│ ├── axios.ts
+│ └── utils.ts
+├── mocks
+├── schemas
+│ └── auth
+│ └── LoginSchema.ts
+├── store
+│ ├── hooks.ts
+│ ├── index.ts
+│ ├── ReduxProvider.tsx
+│ └── rootReducer.ts
+├── styles
+├── tests
+├── types
+└── utility
+└── crypto.ts
+
+backend-app/
+|
+│── prisma/
+│ ├── schema.prisma # Database schema (normalized tables)
+│ ├── migrations/ # Prisma migration files
 │
-├── public/
-│   └── index.html
+│── src/
 │
-├── src/
-│   ├── App.js
-│   ├── index.js
+│ ├── middlewares/
+│ │ ├── auth.middleware.js # JWT validation
+│ │ ├── error.middleware.js # Centralized error handler
+│ │ └── validate.middleware.js# Request validation
+│ │
+│ ├── utils/
+│ │ ├── jwt.js # JWT sign & verify helpers
+│ │ ├── bcrypt.js # Hash & compare passwords
+│ │ └── logger.js # Logging utility
+│ │
+│ ├── services/
+│ │ ├── user.service.js # Business logic for users
+│ │ ├── auth.service.js # Business logic for authentication
+│ │ └── post.service.js # Example service (blog posts)
+│ │
+│ ├── controllers/
+│ │ ├── auth.controller.js
+│ │ ├── user.controller.js
+│ │ └── post.controller.js
+│ │
+│ ├── routes/
+│ │ ├── auth.routes.js
+│ │ ├── user.routes.js
+│ │ └── post.routes.js
+│ │
+│ ├── app.js # Express app setup
+│ └── server.js # Server entry point
 │
-│   ├── components/
-│   │   ├── Header.js
-│   │   ├── Footer.js
-│   │   ├── LoginForm.js
-│   │   ├── BookingForm.js
-│   │   └── CounselorDashboard.js
-│
-│   ├── pages/
-│   │   ├── StudentDashboard.js
-│   │   └── CounselorView.js
-│
-│   ├── utils/
-│   │   └── storage.js
-│
-│   ├── styles/
-│   │   └── style.css
-│
-└── README.md
+│── .env
+│── package.json
 ```
 ## 👤Team Members
 - Abhijeet Raj Singh  
