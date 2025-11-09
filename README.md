@@ -1,5 +1,5 @@
 # 💙 Confidential Wellness Connect  
-### Team MindLink — Rishiverse Hackathon 2025
+### Team NeuroNexus — Rishiverse Hackathon 2025
 
 A lightweight, secure, and privacy-focused web app that allows students to confidentially book wellness or counseling sessions with university counselors — built entirely using **React.js, HTML, CSS, and JavaScript**, with no backend or database.
 
