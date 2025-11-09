@@ -4,9 +4,8 @@
 A lightweight, secure, and privacy-focused web app that allows students to confidentially book wellness or counseling sessions with university counselors — built entirely using **React.js, HTML, CSS, and JavaScript**, with no backend or database.
 
 ---
-## 🎥 Demo Video Link:
-- [Submission 1 ✅](https://drive.google.com/file/d/13054fK2TKMYT9LQkhVkMnT0huGCrmSW2/view?usp=sharing)
-- [Submission 2 ✅](https://drive.google.com/file/d/1Kh0MCaYILAgAEQ4Fp3a4VkW7P95Z6j_C/view?usp=sharing)
+## 🎥 Demo Video Link
+- [Submission 1+2 ✅]([https://drive.google.com/file/d/13054fK2TKMYT9LQkhVkMnT0huGCrmSW2/view?usp=sharing](https://www.canva.com/design/DAG4ME5ysLI/NtDJNNzvjYr-hpdxVfXCJQ/watch?utm_content=DAG4ME5ysLI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h24293be649))
 - [Submission 3]()
 
 
