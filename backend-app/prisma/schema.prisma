@@ -1,0 +1,101 @@
+// Specify your database provider
+datasource db {
+  provider = "postgresql" // or "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+/////////////////////////////////
+// Models
+/////////////////////////////////
+
+// Users for Authentication
+model User {
+  id             Int       @id @default(autoincrement())
+  email          String    @unique
+  password       String
+  name           String?
+  role           Role      @default(STUDENT)
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  // Relations
+  attendance     Attendance[]
+  clubs          ClubMember[]
+  courses        CourseEnrollment[]
+}
+
+// User Roles
+enum Role {
+  STUDENT
+  TEACHER
+  ADMIN
+}
+
+// Password Reset Tokens
+model PasswordReset {
+  id        Int       @id @default(autoincrement())
+  token     String    @unique
+  user      User      @relation(fields: [userId], references: [id])
+  userId    Int
+  expiresAt DateTime
+  createdAt DateTime  @default(now())
+}
+
+// Attendance for ERP
+model Attendance {
+  id        Int       @id @default(autoincrement())
+  user      User      @relation(fields: [userId], references: [id])
+  userId    Int
+  date      DateTime
+  present   Boolean
+}
+
+// Clubs
+model Club {
+  id        Int          @id @default(autoincrement())
+  name      String
+  description String?
+  members   ClubMember[]
+}
+
+model ClubMember {
+  id      Int   @id @default(autoincrement())
+  user    User  @relation(fields: [userId], references: [id])
+  userId  Int
+  club    Club  @relation(fields: [clubId], references: [id])
+  clubId  Int
+  joinedAt DateTime @default(now())
+}
+
+// LMS Courses
+model Course {
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String?
+  createdAt   DateTime  @default(now())
+  enrollments CourseEnrollment[]
+  events      CalendarEvent[]
+}
+
+model CourseEnrollment {
+  id       Int     @id @default(autoincrement())
+  user     User    @relation(fields: [userId], references: [id])
+  userId   Int
+  course   Course  @relation(fields: [courseId], references: [id])
+  courseId Int
+  enrolledAt DateTime @default(now())
+}
+
+// LMS Calendar Events
+model CalendarEvent {
+  id        Int      @id @default(autoincrement())
+  course    Course   @relation(fields: [courseId], references: [id])
+  courseId  Int
+  title     String
+  description String?
+  eventDate DateTime
+  createdAt DateTime @default(now())
+}
