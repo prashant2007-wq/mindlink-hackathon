@@ -4,12 +4,17 @@
 A lightweight, secure, and privacy-focused web app that allows students to confidentially book wellness or counseling sessions with university counselors — built entirely using **React.js, HTML, CSS, and JavaScript**, with no backend or database.
 
 ---
-## 🎥 Demo Video Link
+## 🎥 Demo Video Links
 
-- [Submission 1+2 ✅](https://www.canva.com/design/DAG4ME5ysLI/NtDJNNzvjYr-hpdxVfXCJQ/watch?utm_content=DAG4ME5ysLI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h24293be649)
-- [Demo Frontend View 1](https://drive.google.com/file/d/15OfrBWY5NXcWgSMTXgiBk4BzDrkg3d_L/view?usp=sharing)
-- [Demo Frontend View 2](https://drive.google.com/file/d/1g6HTEvCy_Irh93_vAUIu8pT9FC_jddY-/view?usp=sharing)
-- [Submission 3]()
+Check out the working demos of the NeuroNexus project:
+
+### ✅ Submissions 1 & 2
+- [Submission 1+2](https://www.canva.com/design/DAG4ME5ysLI/NtDJNNzvjYr-hpdxVfXCJQ/watch?utm_content=DAG4ME5ysLI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h24293be649)
+### 🔹 Submission 3
+1. **Secure Login Page Working**  
+   [Watch Video](https://drive.google.com/file/d/1EmHayQ31fWc7AVYpnwRJzu1dGvppz-Xf/view?usp=sharing)
+2. **Overall Demo of the Application**  
+   [Watch Video](https://drive.google.com/file/d/1nWVhNg3JNk0W_SAQEQe6ec5yVlWNEZQ7/view?usp=sharing)
 
 
 
