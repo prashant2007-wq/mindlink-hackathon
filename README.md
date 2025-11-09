@@ -5,8 +5,8 @@ A lightweight, secure, and privacy-focused web app that allows students to confi
 
 ---
 ## 🎥 Demo Video Link:
-- [Submission 1✅](https://drive.google.com/file/d/13054fK2TKMYT9LQkhVkMnT0huGCrmSW2/view?usp=sharing)
-- [Submission 2]()
+- [Submission 1 ✅](https://drive.google.com/file/d/13054fK2TKMYT9LQkhVkMnT0huGCrmSW2/view?usp=sharing)
+- [Submission 2 ✅](https://drive.google.com/file/d/1Kh0MCaYILAgAEQ4Fp3a4VkW7P95Z6j_C/view?usp=sharing)
 - [Submission 3]()
 
 
