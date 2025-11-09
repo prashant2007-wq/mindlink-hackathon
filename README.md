@@ -340,8 +340,35 @@ backend-app/
 ### 🧰 **`utils.ts`**
 - Common **helper functions** used across components  
 ---
+### Folder Details
 
-## 🔹 14. **Project Summary**
+- **controllers** → Handle API request/response logic  
+- **routes** → Map HTTP endpoints to controllers  
+- **services** → Business logic and database operations  
+- **prisma** → Prisma schema for DB models and migrations  
+- **utils** → Helper functions for encryption, JWT, and validation  
+- **middleware** → Auth, error handling, logging  
+- **server.ts** → Initializes Express server, middleware, and routes  
+- **.env** → Stores sensitive environment variables  
+
+---
+
+## 🔹 Environment Variables (`.env`)
+
+Create a `.env` file in the root of backend:
+
+```env
+# Database
+DATABASE_URL="postgresql://username:password@localhost:5432/mindlink"
+
+# JWT Authentication
+JWT_SECRET="supersecretkey123"
+JWT_EXPIRES_IN="1h"
+
+# Server Port
+PORT=5000
+
+
 ### 🧭 **Overview**
 A modular frontend platform designed for **university students and staff**, featuring:
 - 🏫 **ERP Module** – Attendance, Clubs, Profile  
