@@ -7,7 +7,8 @@ A lightweight, secure, and privacy-focused web app that allows students to confi
 ## 🎥 Demo Video Link
 
 - [Submission 1+2 ✅](https://www.canva.com/design/DAG4ME5ysLI/NtDJNNzvjYr-hpdxVfXCJQ/watch?utm_content=DAG4ME5ysLI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h24293be649)
-- [Demo Frontend View](https://drive.google.com/file/d/15OfrBWY5NXcWgSMTXgiBk4BzDrkg3d_L/view?usp=sharing)
+- [Demo Frontend View 1](https://drive.google.com/file/d/15OfrBWY5NXcWgSMTXgiBk4BzDrkg3d_L/view?usp=sharing)
+- [Demo Frontend View 2](https://drive.google.com/file/d/1g6HTEvCy_Irh93_vAUIu8pT9FC_jddY-/view?usp=sharing)
 - [Submission 3]()
 
 
